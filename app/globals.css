@@ -1,0 +1,247 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Shrisha Color Scheme */
+  --color-primary: #d4af37;
+  --color-primary-dark: #b8941f;
+  --color-background: #0a0a0a;
+  --color-foreground: #f5f5f5;
+  --color-secondary: #1a1a1a;
+  --color-text-muted: #888888;
+  --color-border: #333333;
+}
+
+@theme inline {
+  --font-sans: 'Lora', Georgia, serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+}
+
+@layer base {
+  *, *::before, *::after {
+    border-color: transparent;
+  }
+
+  html {
+    @apply scroll-smooth;
+    background-color: rgb(10, 10, 10);
+  }
+
+  body {
+    background-color: rgb(10, 10, 10);
+    color: rgb(245, 245, 245);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+  }
+
+  h1 {
+    @apply text-5xl md:text-7xl;
+  }
+
+  h2 {
+    @apply text-4xl md:text-6xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-4xl;
+  }
+
+  p {
+    font-family: 'Lora', Georgia, serif;
+    @apply text-base md:text-lg leading-relaxed;
+  }
+
+  a {
+    @apply transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .section-header {
+    @apply text-center mb-16 md:mb-24;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-6xl font-bold;
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .accent-text {
+    color: rgb(212, 175, 55);
+  }
+
+  .section-subtitle {
+    color: rgb(136, 136, 136);
+    @apply mt-4 text-lg;
+  }
+
+  .nav-link {
+    @apply uppercase text-sm tracking-widest transition-colors duration-300;
+    color: rgb(136, 136, 136);
+  }
+
+  .nav-link.active {
+    color: rgb(212, 175, 55);
+  }
+
+  .nav-link:hover {
+    color: rgb(212, 175, 55);
+  }
+
+  .btn-primary {
+    @apply px-8 py-3 font-semibold transition-colors duration-300 uppercase tracking-wide;
+    background-color: rgb(212, 175, 55);
+    color: rgb(10, 10, 10);
+  }
+
+  .btn-primary:hover {
+    background-color: rgb(184, 148, 31);
+  }
+
+  .btn-outline {
+    @apply px-8 py-3 border-2 transition-colors duration-300 uppercase tracking-wide;
+    border-color: rgb(212, 175, 55);
+    color: rgb(212, 175, 55);
+  }
+
+  .btn-outline:hover {
+    background-color: rgb(212, 175, 55);
+    color: rgb(10, 10, 10);
+  }
+
+  .gradient-overlay {
+    @apply absolute inset-0;
+    background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.5), transparent);
+  }
+
+  .fade-in {
+    @apply animate-in fade-in duration-700;
+  }
+
+  .slide-up {
+    @apply animate-in slide-in-from-bottom duration-700;
+  }
+
+  .text-balance {
+    @apply break-words;
+  }
+}
+
+@layer utilities {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 md:px-6 lg:px-8;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .absolute-center {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+
+  .text-primary-accent {
+    color: rgb(212, 175, 55);
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-2;
+  }
+
+  .glow-primary {
+    @apply shadow-lg;
+    --tw-shadow-color: rgba(212, 175, 55, 0.2);
+  }
+
+  .bg-secondary {
+    background-color: rgb(26, 26, 26);
+  }
+
+  .text-text-muted {
+    color: rgb(136, 136, 136);
+  }
+
+  .border-border-color {
+    border-color: rgb(51, 51, 51);
+  }
+
+  .bg-secondary\/30 {
+    background-color: rgba(26, 26, 26, 0.3);
+  }
+
+  .hover\:border-primary\/50:hover {
+    border-color: rgba(212, 175, 55, 0.5);
+  }
+
+  .bg-primary {
+    background-color: rgb(212, 175, 55);
+  }
+
+  .text-primary {
+    color: rgb(212, 175, 55);
+  }
+
+  .bg-primary\/5 {
+    background-color: rgba(212, 175, 55, 0.05);
+  }
+
+  .bg-primary\/10 {
+    background-color: rgba(212, 175, 55, 0.1);
+  }
+
+  .border-primary {
+    border-color: rgb(212, 175, 55);
+  }
+
+  .border-primary\/30 {
+    border-color: rgba(212, 175, 55, 0.3);
+  }
+
+  .border-primary\/50 {
+    border-color: rgba(212, 175, 55, 0.5);
+  }
+
+  .shadow-primary\/20 {
+    --tw-shadow-color: rgba(212, 175, 55, 0.2);
+  }
+
+  .from-primary\/10 {
+    --tw-gradient-from: rgba(212, 175, 55, 0.1);
+  }
+
+  .grayscale {
+    filter: grayscale(100%);
+  }
+
+  .grayscale-0 {
+    filter: grayscale(0%);
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  
+}
+
