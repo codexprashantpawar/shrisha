@@ -59,14 +59,14 @@ export default function Contact() {
           {/* Map */}
           <div className="relative w-full h-[400px] md:h-auto">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.5!2d73.856!3d18.516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15126.143646058626!2d73.78222705541994!3d18.594950200000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b8e0b174ca15%3A0x37fd8f8bb33a6cf0!2sRose%20Icon%20Co-Operative%20Housing%20Society!5e0!3m2!1sen!2sin!4v1779705187613!5m2!1sen!2sin"
               width="100%" height="100%"
               style={{ border: 0, filter: 'grayscale(100%) invert(90%) contrast(90%)' }}
               allowFullScreen loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
-
+{/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15126.143646058626!2d73.78222705541994!3d18.594950200000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b8e0b174ca15%3A0x37fd8f8bb33a6cf0!2sRose%20Icon%20Co-Operative%20Housing%20Society!5e0!3m2!1sen!2sin!4v1779705187613!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
           {/* Contact Info */}
           <div className="bg-[#0d0d0d] px-12 py-16 flex flex-col justify-center">
             <div className="space-y-10">
@@ -78,8 +78,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-[10px] tracking-[0.35em] uppercase text-primary mb-2">Phone</p>
-                  <a href="tel:+919876543210" className="text-white/70 text-[15px] tracking-wide hover:text-primary transition-colors">
-                    +91 98765 43210
+                  <a href="tel:+9307882868" className="text-white/70 text-[15px] tracking-wide hover:text-primary transition-colors">
+                    +91 9307882868
                   </a>
                 </div>
               </div>
@@ -92,11 +92,9 @@ export default function Contact() {
                 <div>
                   <p className="text-[10px] tracking-[0.35em] uppercase text-primary mb-2">Email</p>
                   <a href="mailto:info@shrisha.in" className="text-white/70 text-[14px] hover:text-primary transition-colors block">
-                    For Enquiry: info@shrisha.in
+                  architectvilasyele@gmail.com
                   </a>
-                  <a href="mailto:careers@shrisha.in" className="text-white/70 text-[14px] hover:text-primary transition-colors block mt-1">
-                    For Careers: careers@shrisha.in
-                  </a>
+                 
                 </div>
               </div>
 
@@ -108,9 +106,7 @@ export default function Contact() {
                 <div>
                   <p className="text-[10px] tracking-[0.35em] uppercase text-primary mb-2">Address</p>
                   <p className="text-white/70 text-[14px] leading-relaxed">
-                    Shrisha Architects<br />
-                    Pune, Maharashtra – 411001<br />
-                    India
+                   Address:p- Shop No.113, Rose Icon Society Rd, commercial, Pimple Saudagar, Pune, Pimpri-Chinchwad, Maharashtra 411027
                   </p>
                 </div>
               </div>

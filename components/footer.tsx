@@ -5,7 +5,7 @@ import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin, ArrowUpRight } from
 
 export default function Footer() {
   return (
-    <footer className="bg-[#080808] border-t border-primary/10">
+   <footer className="bg-[#1e1e1e] border-t border-primary/10">
 
       {/* Top CTA strip */}
       <div className="border-b border-primary/10 py-10">
@@ -65,7 +65,7 @@ export default function Footer() {
                 { label: 'About Us', href: '/about' },
                 { label: 'Services', href: '/services' },
                 { label: 'Projects', href: '/projects' },
-                { label: 'Achievements', href: '/achievements' },
+                
                 { label: 'Contact', href: '/contact' },
               ].map(({ label, href }) => (
                 <li key={href}>
@@ -99,11 +99,11 @@ export default function Footer() {
             <div className="space-y-4">
               <a href="tel:+919876543210" className="flex items-start gap-3 text-white/35 hover:text-primary text-[12px] transition-colors duration-300 group">
                 <Phone size={13} className="mt-0.5 flex-shrink-0 group-hover:text-primary" />
-                +91 98765 43210
+                +91 93078 82668
               </a>
               <a href="mailto:info@shrisha.in" className="flex items-start gap-3 text-white/35 hover:text-primary text-[12px] transition-colors duration-300 group">
                 <Mail size={13} className="mt-0.5 flex-shrink-0 group-hover:text-primary" />
-                info@shrisha.in
+              architecttilasyele@gmail.com
               </a>
               <p className="flex items-start gap-3 text-white/35 text-[12px]">
                 <MapPin size={13} className="mt-0.5 flex-shrink-0" />

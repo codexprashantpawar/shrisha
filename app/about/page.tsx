@@ -1,25 +1,20 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import Navigation from '@/components/navigation';
 import Footer from '@/components/footer';
 import { founders, teamMembers } from '@/lib/data/team';
 import Image from 'next/image';
+import Link from 'next/link';
 
-/* ── Scroll-reveal hook ─────────────────────────────────────────── */
 function useScrollReveal() {
   useEffect(() => {
-    const els = document.querySelectorAll('.reveal');
+    const els = document.querySelectorAll('.rv');
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add('revealed');
-            observer.unobserve(e.target);
-          }
-        });
-      },
-      { threshold: 0.12 }
+      (entries) => entries.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add('rv-in'); observer.unobserve(e.target); }
+      }),
+      { threshold: 0.1 }
     );
     els.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
@@ -32,216 +27,165 @@ export default function About() {
   return (
     <>
       <style>{`
-        .reveal {
-          opacity: 0;
-          transform: translateY(40px);
-          transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1);
-        }
-        .reveal.revealed {
-          opacity: 1;
-          transform: translateY(0);
-        }
-        .reveal-delay-1 { transition-delay: 0.1s; }
-        .reveal-delay-2 { transition-delay: 0.2s; }
-        .reveal-delay-3 { transition-delay: 0.3s; }
-        .reveal-delay-4 { transition-delay: 0.4s; }
-        .reveal-delay-5 { transition-delay: 0.5s; }
-        .reveal-delay-6 { transition-delay: 0.6s; }
-        .reveal-left {
-          opacity: 0;
-          transform: translateX(-50px);
-          transition: opacity 0.9s cubic-bezier(0.22,1,0.36,1), transform 0.9s cubic-bezier(0.22,1,0.36,1);
-        }
-        .reveal-left.revealed {
-          opacity: 1;
-          transform: translateX(0);
-        }
-        .reveal-right {
-          opacity: 0;
-          transform: translateX(50px);
-          transition: opacity 0.9s cubic-bezier(0.22,1,0.36,1), transform 0.9s cubic-bezier(0.22,1,0.36,1);
-        }
-        .reveal-right.revealed {
-          opacity: 1;
-          transform: translateX(0);
-        }
-        .reveal-scale {
-          opacity: 0;
-          transform: scale(0.92);
-          transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1);
-        }
-        .reveal-scale.revealed {
-          opacity: 1;
-          transform: scale(1);
-        }
+        .rv { opacity:0; transform:translateY(32px); transition:opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1); }
+        .rv.rv-in { opacity:1; transform:translateY(0); }
+        .d1{transition-delay:.1s} .d2{transition-delay:.2s} .d3{transition-delay:.3s}
+        .d4{transition-delay:.4s} .d5{transition-delay:.5s} .d6{transition-delay:.6s}
+
+        .founder-img { filter: grayscale(100%); transition: filter 0.5s; }
+        .founder-img:hover { filter: grayscale(0%); }
+        .team-img { filter: grayscale(100%); transition: filter 0.4s, transform 0.4s; }
+        .team-img:hover { filter: grayscale(0%); transform: scale(1.05); }
       `}</style>
 
       <Navigation />
 
-      {/* ── 1. TENETS — fullscreen hero with text overlay ── */}
-      <section className="relative min-h-screen overflow-hidden bg-black">
+      {/* ── 1. TENETS ── */}
+      <section className="relative min-h-screen bg-[#1a1a1a] overflow-hidden">
         <Image
           src="/images/projects/cultural-center.jpg"
           alt="Shrisha Studio"
           fill
-          className="object-cover opacity-30"
+          className="object-cover opacity-75"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/80" />
+       <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-transparent" />
 
-        {/* Left vertical sidebar */}
+        {/* Left sidebar */}
         <div className="absolute left-0 top-0 h-full w-11 border-r border-primary/20 flex items-center justify-center z-20">
-          <span
-            className="text-[9px] tracking-[0.3em] text-white/30 uppercase select-none"
-            style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
-          >
+          <span className="text-[9px] tracking-[0.3em] text-white/25 uppercase select-none"
+            style={{ writingMode:'vertical-rl', transform:'rotate(180deg)' }}>
             Shrisha — Architectural Visionaries — Pune
           </span>
         </div>
 
-        <div className="relative z-10 flex flex-col justify-center min-h-screen pl-20 pr-16 pt-24 pb-20">
-          <h1 className="reveal text-[11px] tracking-[0.45em] text-primary uppercase mb-8">
+        <div className="relative z-10 flex flex-col justify-center min-h-screen pl-20 pr-16 pt-28 pb-20 max-w-4xl">
+          <h2 className="rv text-[11px] tracking-[0.5em] text-primary uppercase mb-10 font-normal">
             Tenets
-          </h1>
-          <p className="reveal reveal-delay-1 text-white/90 text-lg md:text-xl leading-relaxed max-w-4xl mb-6">
-            <span className="text-primary font-semibold">Shrisha Architects</span> is a multidisciplinary firm with verticals in architecture and interior planning, established in 2009 in Pune.
+          </h2>
+          <p className="rv d1 text-white/90 text-base md:text-lg leading-loose mb-6">
+            <span className="text-primary font-semibold">Shrisha Consultancy</span> is a multidisciplinary design firm specializing in Architectural Design, Architectural Liaisoning, and Interior Design, established in Pune.
           </p>
-          <p className="reveal reveal-delay-2 text-white/55 text-base md:text-lg leading-relaxed max-w-4xl mb-6">
+          <p className="rv d2 text-white/90 text-sm md:text-base leading-loose mb-6">
             The co-founders with their team of young and ambitious creative designers relentlessly work with a unified goal in mind: "end product to client satisfaction". Each project represents a blend of design elements with technology, exploring the ever-changing world of ideas.
           </p>
-          <p className="reveal reveal-delay-3 text-white/55 text-base md:text-lg leading-relaxed max-w-4xl mb-6">
+          <p className="rv d3 text-white/90 text-sm md:text-base leading-loose mb-6">
             The firm has been engaged in conceptualising and designing various size and scale of projects ranging from residential layouts to standalone structures, from private villas to commercial buildings — all conceived from architectural and interior perspectives, each with a fresh vision.
           </p>
-          <p className="reveal reveal-delay-4 text-white/55 text-base md:text-lg leading-relaxed max-w-4xl">
+          <p className="rv d4 text-white/90 text-sm md:text-base leading-loose">
             Driven by a profound belief in the capacity of good design to shape how people behave, the studio's work is underpinned by a clear understanding of the critical role that built environments play in daily life.
           </p>
         </div>
       </section>
 
-      {/* ── 2. DESIGN PHILOSOPHY ── */}
-      <section className="py-24 bg-[#111]">
+      {/* ── 2. FOUNDER ── */}
+      <section className="py-24 bg-[#222]">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="reveal text-[10px] tracking-[0.35em] text-primary uppercase mb-4">Our Philosophy</p>
-              <h2 className="reveal reveal-delay-1 font-display font-bold text-5xl md:text-6xl leading-tight mb-6">
-                Design is a<br /><span className="text-primary">Behaviour</span>
-              </h2>
-              <p className="reveal reveal-delay-2 text-white/50 text-base leading-relaxed mb-4">
-                Not a department with us. We approach each project with thoughtful concepts, research-driven development, and authentic design strategy — making our work highly responsive to context: time, place, and program.
-              </p>
-              <p className="reveal reveal-delay-3 text-white/50 text-base leading-relaxed">
-                Our co-founders relentlessly work with a unified goal: "end product to client satisfaction". We constantly shift visual paradigms with each completed project, the end result eliciting an emotional resonance.
-              </p>
-            </div>
-            <div className="reveal-right relative h-[480px] overflow-hidden">
-              <Image
-                src="/images/projects/koregaon-villas.jpg"
-                alt="Design Philosophy"
-                fill
-                className="object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── 3. FOUNDER SECTION ── */}
-      <section className="py-24 bg-[#0d0d0d]">
-        <div className="container-custom">
-          <h2 className="reveal text-center uppercase tracking-[0.3em] text-4xl md:text-5xl font-bold mb-20">
-            Shrisha <span className="text-primary">Founder</span>
+          <h2 className="rv text-center uppercase tracking-[0.35em] text-4xl md:text-5xl font-bold mb-20">
+            <span className="text-primary">Shrisha</span> Founder
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-16">
             {founders.map((founder, i) => (
-              <div key={founder.id} className={`reveal reveal-delay-${i + 1}`}>
-                {/* Founder image */}
-                <div className="relative h-80 overflow-hidden mb-6 grayscale hover:grayscale-0 transition-all duration-500">
+              <div key={founder.id} className={`rv d${i + 1} text-center`}>
+                {/* Square image */}
+                <div className="relative w-full aspect-square overflow-hidden mb-6 founder-img">
                   <Image
                     src={founder.image}
                     alt={founder.name}
                     fill
-                    className="object-cover hover:scale-105 transition-transform duration-700"
+                    className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 </div>
-                <h3 className="text-[11px] tracking-[0.3em] uppercase text-white font-bold mb-3">
+                <h3 className="text-[13px] tracking-[0.35em] uppercase text-white font-bold mb-2">
                   {founder.name}
                 </h3>
-                <p className="text-[10px] tracking-[0.2em] text-primary uppercase mb-4">{founder.title}</p>
-                <p className="text-white/50 text-[13px] leading-relaxed">{founder.bio}</p>
+                <p className="text-[10px] tracking-[0.25em] text-primary uppercase mb-5">{founder.title}</p>
+                <p className="text-white/50 text-[13px] leading-relaxed text-left">{founder.bio}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
+{/* ── 3. TEAM ── */}
+<section className="py-24 bg-[#1e1e1e]">
+  <div className="container-custom">
+    <h2 className="rv text-center uppercase tracking-[0.35em] text-4xl md:text-5xl font-bold mb-16">
+      Team <span className="text-primary">Shrisha</span>
+    </h2>
 
-      {/* ── 4. TEAM SECTION ── */}
-      <section className="py-24 bg-[#111]">
-        <div className="container-custom">
-          <h2 className="reveal text-center uppercase tracking-[0.3em] text-4xl md:text-5xl font-bold mb-20">
-            Team <span className="text-primary">Shrisha</span>
-          </h2>
-
-          <div className="grid grid-cols-4 md:grid-cols-8 gap-4">
-            {teamMembers.map((member, i) => (
-              <div
-                key={member.id}
-                className={`reveal reveal-delay-${(i % 6) + 1} flex flex-col items-center`}
-              >
-                <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden mb-2 grayscale hover:grayscale-0 transition-all duration-500">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <p className="text-[8px] tracking-[0.1em] text-white/40 uppercase text-center leading-tight">
-                  {member.name.split(' ')[0]}
-                </p>
+    <div className="grid grid-cols-4 md:grid-cols-8">
+      {Array.from({ length: 8 }).map((_, i) => {
+        const memberIndex = [1,2,4,5,7,8,10,11,13,14,16,17,19,20,22,23].indexOf(i);
+        const hasPhoto = memberIndex !== -1 && memberIndex < teamMembers.length;
+        return (
+          <div key={i} className="relative aspect-square overflow-hidden border border-[#222] bg-[#2a2a2a]">
+           {hasPhoto ? (
+  <>
+    <Image
+      src={teamMembers[memberIndex].image}
+      alt={teamMembers[memberIndex].name}
+      fill
+      className="object-cover team-img"
+    />
+    <div className="absolute inset-0 bg-black/70 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-2">
+      <p className="text-white text-[11px] tracking-[0.2em] uppercase font-bold text-center leading-tight">
+        {teamMembers[memberIndex].name}
+      </p>
+      <p className="text-primary text-[9px] tracking-[0.15em] uppercase mt-1 text-center">
+        {teamMembers[memberIndex].role}
+      </p>
+    </div>
+  </>
+            ) : (
+              <div className="absolute inset-0 flex items-center justify-center bg-[#262626]">
+                <Image
+                  src="/images/media/logo.png"
+                  alt="Shrisha"
+                  width={65}
+                  height={32}
+                  className="object-contain opacity-30 brightness-200"
+                />
               </div>
-            ))}
+            )}
           </div>
-        </div>
-      </section>
-
-      {/* ── 5. INTERIOR PHILOSOPHY ── */}
-      <section className="py-24 bg-[#0a0a0a]">
+        );
+      })}
+    </div>
+  </div>
+</section>
+      {/* ── 4. PHILOSOPHY ── */}
+     <section className="py-24 bg-[#222]">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div className="reveal-left relative h-[480px] overflow-hidden order-2 md:order-1">
+            <div className="relative aspect-square overflow-hidden rv">
               <Image
-                src="/images/projects/it-complex.jpg"
-                alt="Interior Design"
+                src="/images/projects/koregaon-villas.jpg"
+                alt="Design Philosophy"
                 fill
-                className="object-cover hover:scale-105 transition-transform duration-700"
+                className="object-cover founder-img"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
             </div>
-            <div className="order-1 md:order-2">
-              <p className="reveal text-[10px] tracking-[0.35em] text-primary uppercase mb-4">Interior Design</p>
-              <h2 className="reveal reveal-delay-1 font-display font-bold text-5xl md:text-6xl leading-tight mb-6">
-                Clean &<br /><span className="text-primary">Contextual</span>
+            <div>
+              <p className="rv text-[10px] tracking-[0.35em] text-primary uppercase mb-4">Our Philosophy</p>
+              <h2 className="rv d1 font-display font-bold text-4xl md:text-5xl leading-tight mb-6">
+                Design is a <span className="text-primary">Behaviour</span>
               </h2>
-              <p className="reveal reveal-delay-2 text-white/50 text-base leading-relaxed mb-4">
-                The firm's concept sits on a design style that is "clean and contextual". We find balance in our designs by juxtaposing warm and cool features.
+              <p className="rv d2 text-white/55 text-sm leading-loose mb-4">
+                Not a department with us. We approach each project with thoughtful concepts, research-driven development, and authentic design strategy — making our work highly responsive to context: time, place, and program.
               </p>
-              <p className="reveal reveal-delay-3 text-white/50 text-base leading-relaxed mb-8">
+              <p className="rv d3 text-white/55 text-sm leading-loose mb-10">
                 We like the blending of refined and clean items with slightly offbeat elements. Our work is driven by research and development, weaving thoughtful concepts throughout all aspects of design.
               </p>
-              <div className="reveal reveal-delay-4 grid grid-cols-2 gap-8 pt-6 border-t border-primary/20">
+              <div className="rv d4 grid grid-cols-2 gap-8 pt-6 border-t border-primary/20">
                 <div>
-                  <div className="text-4xl font-light text-primary mb-1"
-                    style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>50+</div>
-                  <p className="text-[10px] tracking-[0.2em] text-white/40 uppercase">Projects Delivered</p>
+                  <div className="text-5xl font-light text-primary mb-1" style={{ fontFamily:"'Cormorant Garamond',Georgia,serif" }}>100+</div>
+                  <p className="text-[10px] tracking-[0.2em] text-white/35 uppercase">Projects Completed</p>
                 </div>
                 <div>
-                  <div className="text-4xl font-light text-primary mb-1"
-                    style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>14</div>
-                  <p className="text-[10px] tracking-[0.2em] text-white/40 uppercase">Years of Excellence</p>
+                  <div className="text-5xl font-light text-primary mb-1" style={{ fontFamily:"'Cormorant Garamond',Georgia,serif" }}>14+</div>
+                  <p className="text-[10px] tracking-[0.2em] text-white/35 uppercase">Years of Excellence</p>
                 </div>
               </div>
             </div>
@@ -249,11 +193,11 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── 6. CORE VALUES ── */}
-      <section className="py-24 bg-[#111]">
+      {/* ── 5. CORE VALUES ── */}
+      <section className="py-24 bg-[#1e1e1e]">
         <div className="container-custom">
-          <p className="reveal text-[10px] tracking-[0.35em] text-primary uppercase mb-4 text-center">What Drives Us</p>
-          <h2 className="reveal reveal-delay-1 font-display font-bold text-4xl md:text-5xl uppercase tracking-wider mb-16 text-center">
+          <p className="rv text-[10px] tracking-[0.4em] text-primary uppercase mb-3 text-center">What Drives Us</p>
+          <h2 className="rv d1 font-display font-bold text-4xl md:text-5xl uppercase tracking-wider mb-16 text-center">
             Core <span className="text-primary">Values</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-primary/10">
@@ -262,13 +206,11 @@ export default function About() {
               { num: '02', title: 'Quality', desc: 'Unwavering commitment to excellence in design, materials, and execution on every project.' },
               { num: '03', title: 'Sustainability', desc: 'Creating spaces that respect the environment and benefit communities for generations to come.' },
             ].map(({ num, title, desc }, i) => (
-              <div key={title} className={`reveal reveal-delay-${i + 1} group bg-[#161616] p-10 border border-primary/10 hover:border-primary/40 hover:bg-[#1a1a1a] transition-all duration-300`}>
-                <div className="text-[48px] font-light text-primary/20 leading-none mb-4"
-                  style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
-                  {num}
-                </div>
-                <h3 className="text-[13px] tracking-[0.2em] uppercase font-semibold text-white mb-4">{title}</h3>
-                <p className="text-[13px] leading-relaxed text-white/45">{desc}</p>
+              <div key={title} className={`rv d${i+1} group bg-[#262626] p-10 hover:bg-[#2a2a2a] transition-all duration-300`}>
+                <div className="text-[48px] font-light text-primary/15 leading-none mb-4"
+                  style={{ fontFamily:"'Cormorant Garamond',Georgia,serif" }}>{num}</div>
+                <h3 className="text-[12px] tracking-[0.25em] uppercase font-bold text-white mb-4">{title}</h3>
+                <p className="text-[13px] leading-relaxed text-white/50">{desc}</p>
               </div>
             ))}
           </div>

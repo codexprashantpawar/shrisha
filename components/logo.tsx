@@ -1,44 +1,36 @@
-'use client';
+// 'use client';
+
+// export default function Logo() {
+//   return (
+//     <div className="flex flex-col">
+//       <span
+//         className="text-white font-bold tracking-[0.15em] leading-none"
+//         style={{ fontSize: '20px', fontFamily: "'Montserrat', sans-serif" }}
+//       >
+//         SHRISHA
+//       </span>
+//       <svg width="110" height="10" viewBox="0 0 110 10" className="mt-1">
+//         <line x1="0" y1="5" x2="110" y2="5" stroke="rgba(212,175,55,0.5)" strokeWidth="0.5" />
+//         {[0,8,16,24,32,40,48,56,64,72,80,88,96,104,110].map((x, i) => (
+//           <line key={x} x1={x} y1={i % 4 === 0 ? 1 : 3} x2={x} y2={i % 4 === 0 ? 9 : 7}
+//             stroke="rgba(212,175,55,0.5)" strokeWidth="0.7" />
+//         ))}
+//       </svg>
+//     </div>
+//   );
+// }
+
+
+import Image from 'next/image';
 
 export default function Logo() {
   return (
-    <div className="flex items-center gap-2">
-      <div className="relative w-12 h-12 flex-center">
-        {/* Main golden circle */}
-        <div className="w-10 h-10 rounded-full bg-primary flex-center relative overflow-hidden">
-          {/* Vertical lines pattern */}
-          <svg
-            viewBox="0 0 40 40"
-            className="w-full h-full"
-            preserveAspectRatio="xMidYMid meet"
-          >
-            <g opacity="0.3" stroke="rgb(10, 10, 10)" strokeWidth="1">
-              <line x1="8" y1="8" x2="8" y2="32" />
-              <line x1="14" y1="8" x2="14" y2="32" />
-              <line x1="20" y1="8" x2="20" y2="32" />
-              <line x1="26" y1="8" x2="26" y2="32" />
-              <line x1="32" y1="8" x2="32" y2="32" />
-            </g>
-            {/* Center "S" */}
-            <text
-              x="20"
-              y="28"
-              textAnchor="middle"
-              fontSize="24"
-              fontWeight="700"
-              fill="rgb(10, 10, 10)"
-              fontFamily="'Playfair Display', serif"
-            >
-              S
-            </text>
-          </svg>
-        </div>
-      </div>
-      {/* Text */}
-      <div className="flex flex-col leading-tight">
-        <span className="text-xs font-bold tracking-widest text-primary">SHRISHA</span>
-        <span className="text-xs tracking-widest text-text-muted">ARCHITECTS</span>
-      </div>
-    </div>
+    <Image
+      src="/images/media/logo.png"
+      alt="Shrisha"
+      width={130}
+      height={55}
+      className="object-contain"
+    />
   );
 }
