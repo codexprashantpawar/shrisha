@@ -1,0 +1,39 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2140 310" width="2140" height="310">
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m725 0h690v310h-690zm151 99.07c0 0 0 74.82 0 74.82v6.67c0 1.1 0.9 2 2 2h389.16v-8.67c0-1.11-0.89-2-2-2h-387.16c-1.1 0-2 0.89-2 2v38.52c0 1.1 0.9 2 2 2h387.16c1.11 0 2-0.9 2-2v-29.85h39.86c1.1 0 2-0.9 2-2v-81.49c0-1.1-0.9-2-2-2h-429.02c-1.1 0-2 0.9-2 2zm-1.22 119.63v20c0 1.11 0.89 2 2 2h224.82c1.1 0 2-0.89 2-2v-20c0-1.1-0.9-2-2-2h-224.82c-1.11 0-2 0.9-2 2z"/>
+		</clipPath>
+	</defs>
+	<style>
+		tspan { white-space:pre } 
+		.s0 { fill: none;stroke: #ffffff;stroke-linecap: round;stroke-width: 3.5 } 
+		.s1 { opacity: .6;fill: #000000;stroke: #ffffff;stroke-width: 1.5 } 
+		.t2 { font-size: 72px;fill: #ffffff;font-family: "Georgia" } 
+		.s3 { opacity: .7;fill: none;stroke: #ffffff;stroke-linecap: round;stroke-width: 2.5 } 
+		.t4 { font-size: 34px;fill: #ffffff;font-family: "Georgia" } 
+		.s5 { opacity: .8;fill: #ffffff } 
+		.s6 { opacity: .9;fill: #ffffff } 
+		.t7 { font-size: 18px;fill: #ffffff;font-family: "Georgia" } 
+	</style>
+	<path fill-rule="evenodd" class="s0" d="m805 240c0-40 30-50 30-90 0-40-30-50-30-90"/>
+	<path fill-rule="evenodd" class="s1" d="m855 60v180"/>
+	<text id="SHRISHA" transform="translate(880,165)">
+		<tspan x="0" y="0" class="t2">SHRISHA
+</tspan>
+	</text>
+	<g id="Clip-Path" clip-path="url(#cp1)">
+		<path fill-rule="evenodd" class="s3" d="m880 170c30-10 60 10 105-2"/>
+	</g>
+	<text id="CONSULTANCY" transform="translate(880,205)">
+		<tspan x="0" y="0" class="t4">CONSULTANCY
+</tspan>
+	</text>
+	<path fill-rule="evenodd" class="s5" d="m1295 126c-3.32 0-6-2.68-6-6 0-3.32 2.68-6 6-6 3.32 0 6 2.68 6 6 0 3.32-2.68 6-6 6z"/>
+	<path fill-rule="evenodd" class="s6" d="m1283 222c-3.87 0-7-3.13-7-7 0-3.87 3.13-7 7-7 3.87 0 7 3.13 7 7 0 3.87-3.13 7-7 7z"/>
+	<path fill-rule="evenodd" class="s6" d="m1303 224c-4.98 0-9-4.02-9-9 0-4.98 4.02-9 9-9 4.98 0 9 4.02 9 9 0 4.98-4.02 9-9 9z"/>
+	<path fill-rule="evenodd" class="s6" d="m1327 226c-6.08 0-11-4.92-11-11 0-6.08 4.92-11 11-11 6.08 0 11 4.92 11 11 0 6.08-4.92 11-11 11z"/>
+	<text id="Architect &amp; Interior" transform="translate(881,235)" style="opacity: .75">
+		<tspan x="0" y="0" class="t7">Architect &amp; Interior
+</tspan>
+	</text>
+</svg>

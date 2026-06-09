@@ -256,7 +256,7 @@ export default function About() {
               Founder &amp; Principal Architect
             </p>
 
-            <p
+            {/* <p
               style={{
                 fontFamily: "'Montserrat', sans-serif",
                 fontWeight: 300,
@@ -271,7 +271,7 @@ export default function About() {
               contextual sensitivity, and client-centred collaboration. His holistic approach spans
               architecture, interiors, and regulatory liaisoning — ensuring every project is
               delivered with precision, creativity, and care.
-            </p>
+            </p> */}
           </div>
         </div>
       </section>

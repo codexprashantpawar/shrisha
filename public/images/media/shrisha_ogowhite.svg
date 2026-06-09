@@ -1,0 +1,33 @@
+<svg width="100%" viewBox="0 0 690 310" role="img" xmlns="http://www.w3.org/2000/svg" style=""><defs><mask id="imagine-text-gaps-2mn526" maskUnits="userSpaceOnUse"><rect x="0" y="0" width="690" height="310" fill="white"/><rect x="151" y="97.07160949707031" width="433.015869140625" height="85.4845199584961" fill="black" rx="2"/><rect x="151" y="171.88771057128906" width="391.1624450683594" height="42.519954681396484" fill="black" rx="2"/><rect x="149.77767944335938" y="216.70309448242188" width="228.81842041015625" height="24.00074577331543" fill="black" rx="2"/></mask></defs>
+  <title style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Shrisha Consultancy - White Logo</title>
+  <desc style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Shrisha Consultancy Architect and Interior logo in white on dark background</desc>
+
+  <rect width="680" height="300" fill="#1a1a1a" rx="8" style="fill:rgb(26, 26, 26);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- S-curve left decorative element -->
+  <path d="M 80 240 C 80 200, 110 190, 110 150 C 110 110, 80 100, 80 60" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round" style="fill:none;stroke:rgb(255, 255, 255);color:rgb(0, 0, 0);stroke-width:3.5px;stroke-linecap:round;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Vertical divider line -->
+  <line x1="130" y1="60" x2="130" y2="240" stroke="white" stroke-width="1.5" opacity="0.6" style="fill:rgb(0, 0, 0);stroke:rgb(255, 255, 255);color:rgb(0, 0, 0);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.6;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- SHRISHA text -->
+  <text x="155" y="165" font-family="Georgia, serif" font-size="72" font-weight="700" fill="white" letter-spacing="8" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Georgia, serif;font-size:72px;font-weight:700;text-anchor:start;dominant-baseline:auto">SHRISHA</text>
+
+  <!-- Decorative wave line under SHR in SHRISHA -->
+  <path d="M 155 170 C 185 160, 215 180, 260 168" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity="0.7" mask="url(#imagine-text-gaps-2mn526)" style="fill:none;stroke:rgb(255, 255, 255);color:rgb(0, 0, 0);stroke-width:2.5px;stroke-linecap:round;stroke-linejoin:miter;opacity:0.7;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- CONSULTANCY text -->
+  <text x="155" y="205" font-family="Georgia, serif" font-size="34" font-weight="400" fill="white" letter-spacing="12" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Georgia, serif;font-size:34px;font-weight:400;text-anchor:start;dominant-baseline:auto">CONSULTANCY</text>
+
+  <!-- Dot accent top right of CONSULTANCY -->
+  <circle cx="570" cy="120" r="6" fill="white" opacity="0.8" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.8;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Three dots bottom right -->
+  <circle cx="558" cy="215" r="7" fill="white" opacity="0.9" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.9;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <circle cx="578" cy="215" r="9" fill="white" opacity="0.9" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.9;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <circle cx="602" cy="215" r="11" fill="white" opacity="0.9" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.9;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Architect & Interior text -->
+  <text x="156" y="235" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-style="italic" fill="white" opacity="0.75" letter-spacing="3" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.75;font-family:Georgia, &quot;Times New Roman&quot;, serif;font-size:18px;font-weight:400;font-style:italic;text-anchor:start;dominant-baseline:auto">Architect &amp; Interior</text>
+
+</svg>

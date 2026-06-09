@@ -170,11 +170,12 @@ export default function Navigation() {
         </div>
 
         {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-white"
-          aria-label="Toggle menu"
-        >
+       {/* Mobile Menu Button */}
+<button
+  onClick={() => setIsOpen(!isOpen)}
+  className="md:hidden text-white ml-auto"
+  aria-label="Toggle menu"
+>
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
