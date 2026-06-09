@@ -6,9 +6,9 @@
 
 :root {
   /* Shrisha Color Scheme */
-  --color-primary: #d4af37;
-  --color-primary-dark: #b8941f;
-  --color-background: #1c1c1c;
+  --color-primary: #f9b617;
+--color-primary-dark: #e0a000;
+--color-background: #272727;
   --color-foreground: #f5f5f5;
   --color-secondary: #1a1a1a;
   --color-text-muted: #888888;
@@ -16,9 +16,9 @@
 }
 
 @theme inline {
-  --font-sans: 'Lora', Georgia, serif;
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: var(--font-montserrat), sans-serif;
+  --font-display: var(--font-oswald), sans-serif;
+  --font-serif: var(--font-montserrat), sans-serif;
 }
 
 @layer base {
@@ -27,37 +27,42 @@
   }
 
   html {
-    @apply scroll-smooth;
-    /* background-color: rgb(10, 10, 10); */
-    background-color: rgb(28, 28, 28);
-  }
+  @apply scroll-smooth;
+  font-size: 75%;
+  -webkit-font-smoothing: antialiased;
+  background-color: #272727;
+}
 
-  body {
-    background-color: rgb(28, 28, 28);
-    color: rgb(245, 245, 245);
-  }
+body {
+  background-color: #272727;
+  color: rgba(255, 255, 255, 0.5);
+}
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-weight: 700;
-  }
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-oswald), sans-serif;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #fff;
+}
 
   h1 {
     @apply text-5xl md:text-7xl;
   }
 
   h2 {
-    @apply text-4xl md:text-6xl;
-  }
-
+  font-size: 2.1875em;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
   h3 {
     @apply text-2xl md:text-4xl;
   }
 
-  p {
-    font-family: 'Lora', Georgia, serif;
-    @apply text-base md:text-lg leading-relaxed;
-  }
+ p {
+  font-family: var(--font-montserrat), sans-serif;
+  font-weight: 300;
+  @apply text-base leading-relaxed;
+}
 
   a {
     @apply transition-colors duration-300;
@@ -70,13 +75,17 @@
   }
 
   .section-title {
-    @apply text-4xl md:text-6xl font-bold;
-    font-family: 'Playfair Display', Georgia, serif;
-  }
+  font-family: var(--font-oswald), sans-serif;
+  font-size: 2.1875em;
+  font-weight: 400;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #fff;
+}
 
   .accent-text {
-    color: rgb(212, 175, 55);
-  }
+  color: #f9b617;
+}
 
   .section-subtitle {
     color: rgb(136, 136, 136);
@@ -89,33 +98,27 @@
   }
 
   .nav-link.active {
-    color: rgb(212, 175, 55);
-  }
-
-  .nav-link:hover {
-    color: rgb(212, 175, 55);
-  }
+  color: #f9b617;
+}
+.nav-link:hover {
+  color: #f9b617;
+}
 
   .btn-primary {
-    @apply px-8 py-3 font-semibold transition-colors duration-300 uppercase tracking-wide;
-    background-color: rgb(212, 175, 55);
-    color: rgb(10, 10, 10);
-  }
-
-  .btn-primary:hover {
-    background-color: rgb(184, 148, 31);
-  }
-
-  .btn-outline {
-    @apply px-8 py-3 border-2 transition-colors duration-300 uppercase tracking-wide;
-    border-color: rgb(212, 175, 55);
-    color: rgb(212, 175, 55);
-  }
-
-  .btn-outline:hover {
-    background-color: rgb(212, 175, 55);
-    color: rgb(10, 10, 10);
-  }
+  background-color: #f9b617;
+  color: #111;
+}
+.btn-primary:hover {
+  background-color: #e0a000;
+}
+.btn-outline {
+  border-color: #f9b617;
+  color: #f9b617;
+}
+.btn-outline:hover {
+  background-color: #f9b617;
+  color: #111;
+}
 
   .gradient-overlay {
     @apply absolute inset-0;
@@ -148,9 +151,6 @@
     @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
   }
 
-  .text-primary-accent {
-    color: rgb(212, 175, 55);
-  }
 
   .hover-scale {
     @apply transition-transform duration-300 hover:scale-105;
@@ -186,25 +186,16 @@
   }
 
   .bg-primary {
-    background-color: rgb(212, 175, 55);
-  }
+  background-color: #f9b617;
+}
 
-  .text-primary {
-    color: rgb(212, 175, 55);
-  }
+.text-primary {
+  color: #f9b617;
+}
 
-  .bg-primary\/5 {
-    background-color: rgba(212, 175, 55, 0.05);
-  }
-
-  .bg-primary\/10 {
-    background-color: rgba(212, 175, 55, 0.1);
-  }
-
-  .border-primary {
-    border-color: rgb(212, 175, 55);
-  }
-
+.border-primary {
+  border-color: #f9b617;
+}
   .border-primary\/30 {
     border-color: rgba(212, 175, 55, 0.3);
   }
@@ -242,13 +233,21 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-.bg-\[\#0a0a0a\] { background-color: #1a1a1a !important; }
-  .bg-\[\#0d0d0d\] { background-color: #1e1e1e !important; }
-  .bg-\[\#111\]    { background-color: #222222 !important; }
-  .bg-\[\#161616\] { background-color: #262626 !important; }
-  .bg-\[\#1a1a1a\] { background-color: #2a2a2a !important; }
-  .bg-\[\#1c1c1c\] { background-color: #2c2c2c !important; }
-  .bg-black        { background-color: #1a1a1a !important; }
+.bg-\[\#0a0a0a\] { background-color: #272727 !important; }
+.bg-\[\#0d0d0d\] { background-color: #272727 !important; }
+.bg-\[\#111\]    { background-color: #272727 !important; }
+.bg-\[\#161616\] { background-color: #272727 !important; }
+.bg-\[\#1a1a1a\] { background-color: #272727 !important; }
+.bg-\[\#1c1c1c\] { background-color: #272727 !important; }
+.bg-black        { background-color: #272727 !important; }
   
 }
 
+::selection {
+  background-color: #f9b617;
+  color: #fff;
+}
+
+.text-primary-accent {
+  color: #f9b617;
+}

@@ -1,12 +1,11 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, Lora, Cormorant_Garamond } from 'next/font/google'
+// import { Playfair_Display, Lora, Cormorant_Garamond } from 'next/font/google'
+import { Oswald, Montserrat } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-
-const playfair = Playfair_Display({ subsets: ["latin"], variable: '--font-playfair' });
-const lora = Lora({ subsets: ["latin"], variable: '--font-lora' });
-const cormorant = Cormorant_Garamond({ subsets: ["latin"], weight: ['300','400','600'], variable: '--font-cormorant' });
+const oswald = Oswald({ subsets: ["latin"], weight: ['300','400','700'], variable: '--font-oswald' });
+const montserrat = Montserrat({ subsets: ["latin"], weight: ['300','400','500','600','700'], variable: '--font-montserrat' });
 
 export const metadata: Metadata = {
   title: 'Shrisha - Architectural Visionaries',
@@ -38,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${playfair.variable} ${lora.variable} ${cormorant.variable} antialiased bg-black text-white`}>
+     <body className={`${oswald.variable} ${montserrat.variable} antialiased bg-[#272727] text-white`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

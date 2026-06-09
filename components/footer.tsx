@@ -1,76 +1,115 @@
 'use client';
 
 import Link from 'next/link';
-import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin, ArrowUpRight } from 'lucide-react';
+import { Instagram, Phone, Mail } from 'lucide-react';
 
 export default function Footer() {
   return (
-   <footer className="bg-[#1e1e1e] border-t border-primary/10">
+    <footer style={{ backgroundColor: '#272727', borderTop: '1px solid rgba(255,255,255,0.12)' }}>
 
-      {/* Top CTA strip */}
-      <div className="border-b border-primary/10 py-10">
-        <div className="container-custom flex flex-col md:flex-row items-center justify-between gap-6">
+      {/* Main footer columns */}
+      <div className="container-custom" style={{ padding: '60px 0 40px' }}>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+          gap: '40px',
+          marginBottom: '40px',
+        }}>
+
+          {/* Col 1 — Contact Us */}
           <div>
-            <p className="text-[10px] tracking-[0.35em] text-primary uppercase mb-1">Ready to Build?</p>
-            <h3 className="font-display font-bold text-2xl md:text-3xl text-white">
-              Let's Create Something <span className="text-primary">Extraordinary</span>
-            </h3>
-          </div>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-3 px-8 py-3 border border-primary text-primary text-[11px] tracking-[0.25em] uppercase hover:bg-primary hover:text-black transition-colors duration-300 flex-shrink-0"
-          >
-            Start a Project <ArrowUpRight size={14} />
-          </Link>
-        </div>
-      </div>
-
-      {/* Main footer */}
-      <div className="container-custom py-14">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-
-          {/* Brand */}
-          <div className="md:col-span-1">
-            <div className="font-display font-bold text-2xl tracking-wider text-white mb-4">
-              SH<span className="text-primary">.</span>RISHA
-            </div>
-            <p className="text-white/35 text-[12px] leading-relaxed mb-6">
-              Premium architectural consultancy specializing in innovative design that blends aesthetics with functionality.
-            </p>
-            <div className="flex items-center gap-3">
-              {[
-                { icon: Facebook, label: 'facebook' },
-                { icon: Instagram, label: 'instagram' },
-                { icon: Linkedin, label: 'linkedin' },
-              ].map(({ icon: Icon, label }) => (
-                <a
-                  key={label}
-                  href={`https://${label}.com`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-8 h-8 border border-primary/20 flex items-center justify-center text-white/30 hover:border-primary hover:text-primary transition-all duration-300"
-                >
-                  <Icon size={14} />
+            <h5 style={{
+              fontFamily: "'Oswald', sans-serif",
+              fontWeight: 400,
+              fontSize: '15px',
+              letterSpacing: '0.08em',
+              color: '#fff',
+              marginBottom: '20px',
+              marginTop: 0,
+            }}>
+              Contact Us
+            </h5>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+              <li style={{ marginBottom: '12px' }}>
+                <p style={{
+                  fontFamily: "'Montserrat', sans-serif",
+                  fontWeight: 300,
+                  fontSize: '13px',
+                  lineHeight: '1.65',
+                  color: 'rgba(255,255,255,0.5)',
+                  margin: 0,
+                }}>
+                  Pune, Maharashtra, India
+                </p>
+              </li>
+              <li style={{ marginBottom: '10px' }}>
+                <a href="tel:+919307882668" style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  fontFamily: "'Montserrat', sans-serif",
+                  fontWeight: 300,
+                  fontSize: '13px',
+                  color: 'rgba(255,255,255,0.5)',
+                  textDecoration: 'none',
+                  lineHeight: '1.65',
+                }}>
+                  <Phone size={12} style={{ flexShrink: 0 }} />
+                  +91 93078 82668
                 </a>
-              ))}
-            </div>
+              </li>
+              <li>
+                <a href="mailto:architecttilasyele@gmail.com" style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  fontFamily: "'Montserrat', sans-serif",
+                  fontWeight: 300,
+                  fontSize: '13px',
+                  color: 'rgba(255,255,255,0.5)',
+                  textDecoration: 'none',
+                  lineHeight: '1.65',
+                }}>
+                  <Mail size={12} style={{ flexShrink: 0 }} />
+                  architecttilasyele@gmail.com
+                </a>
+              </li>
+            </ul>
           </div>
 
-          {/* Quick Links */}
+          {/* Col 2 — Quick Links */}
           <div>
-            <h4 className="text-[10px] tracking-[0.3em] uppercase text-primary mb-5">Navigate</h4>
-            <ul className="space-y-3">
+            <h5 style={{
+              fontFamily: "'Oswald', sans-serif",
+              fontWeight: 400,
+              fontSize: '15px',
+              letterSpacing: '0.08em',
+              color: '#fff',
+              marginBottom: '20px',
+              marginTop: 0,
+            }}>
+              Quick Links
+            </h5>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               {[
                 { label: 'Home', href: '/' },
-                { label: 'About Us', href: '/about' },
-                { label: 'Services', href: '/services' },
-                { label: 'Projects', href: '/projects' },
-                
+                { label: 'About us', href: '/about' },
+                { label: 'Achievements', href: '/achievements' },
                 { label: 'Contact', href: '/contact' },
               ].map(({ label, href }) => (
-                <li key={href}>
-                  <Link href={href} className="text-white/35 hover:text-primary text-[12px] tracking-wide transition-colors duration-300 flex items-center gap-2 group">
-                    <span className="w-3 h-px bg-primary/30 group-hover:w-5 group-hover:bg-primary transition-all duration-300" />
+                <li key={href} style={{ marginBottom: '10px' }}>
+                  <Link href={href} style={{
+                    fontFamily: "'Montserrat', sans-serif",
+                    fontWeight: 300,
+                    fontSize: '13px',
+                    color: 'rgba(255,255,255,0.5)',
+                    textDecoration: 'none',
+                    lineHeight: '1.65',
+                    transition: 'color 0.3s',
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = '#f9b617'}
+                  onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.5)'}
+                  >
                     {label}
                   </Link>
                 </li>
@@ -78,51 +117,105 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Col 3 — Expertise */}
           <div>
-            <h4 className="text-[10px] tracking-[0.3em] uppercase text-primary mb-5">Services</h4>
-            <ul className="space-y-3">
-              {['Architecture Design', 'Interior Design', 'Sustainable Design', 'Project Management', 'Consultation'].map((s) => (
-                <li key={s}>
-                  <span className="text-white/35 text-[12px] tracking-wide flex items-center gap-2 group">
-                    <span className="w-3 h-px bg-primary/20" />
-                    {s}
-                  </span>
+            <h5 style={{
+              fontFamily: "'Oswald', sans-serif",
+              fontWeight: 400,
+              fontSize: '15px',
+              letterSpacing: '0.08em',
+              color: '#fff',
+              marginBottom: '20px',
+              marginTop: 0,
+            }}>
+              Expertise
+            </h5>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+              {[
+                { label: 'Architecture', href: '/projects?category=architecture' },
+                { label: 'Interior', href: '/projects?category=interior' },
+                { label: 'Liasoning', href: '/projects?category=liasoning' },
+              ].map(({ label, href }) => (
+                <li key={href} style={{ marginBottom: '10px' }}>
+                  <Link href={href} style={{
+                    fontFamily: "'Montserrat', sans-serif",
+                    fontWeight: 300,
+                    fontSize: '13px',
+                    color: 'rgba(255,255,255,0.5)',
+                    textDecoration: 'none',
+                    lineHeight: '1.65',
+                    transition: 'color 0.3s',
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = '#f9b617'}
+                  onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.5)'}
+                  >
+                    {label}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Col 4 — Follow Us */}
           <div>
-            <h4 className="text-[10px] tracking-[0.3em] uppercase text-primary mb-5">Contact</h4>
-            <div className="space-y-4">
-              <a href="tel:+919876543210" className="flex items-start gap-3 text-white/35 hover:text-primary text-[12px] transition-colors duration-300 group">
-                <Phone size={13} className="mt-0.5 flex-shrink-0 group-hover:text-primary" />
-                +91 93078 82668
-              </a>
-              <a href="mailto:info@shrisha.in" className="flex items-start gap-3 text-white/35 hover:text-primary text-[12px] transition-colors duration-300 group">
-                <Mail size={13} className="mt-0.5 flex-shrink-0 group-hover:text-primary" />
-              architecttilasyele@gmail.com
-              </a>
-              <p className="flex items-start gap-3 text-white/35 text-[12px]">
-                <MapPin size={13} className="mt-0.5 flex-shrink-0" />
-                Pune, Maharashtra, India
-              </p>
-            </div>
+            <h5 style={{
+              fontFamily: "'Oswald', sans-serif",
+              fontWeight: 400,
+              fontSize: '15px',
+              letterSpacing: '0.08em',
+              color: '#fff',
+              marginBottom: '20px',
+              marginTop: 0,
+            }}>
+              Follow us
+            </h5>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+              <li>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: 'rgba(255,255,255,0.5)', transition: 'color 0.3s' }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = '#f9b617'}
+                  onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.5)'}
+                >
+                  <Instagram size={18} />
+                </a>
+              </li>
+            </ul>
           </div>
-        </div>
 
-        {/* Bottom bar */}
-        <div className="border-t border-primary/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/20 text-[11px] tracking-[0.15em]">
-            © 2024 Shrisha Architectural Consultancy. All rights reserved.
-          </p>
-          <p className="text-white/15 text-[10px] tracking-[0.2em] uppercase">
-            Pune · Maharashtra · India
-          </p>
         </div>
       </div>
+
+      {/* Bottom bar */}
+      <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+        <div className="container-custom" style={{ padding: '18px 0' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
+            <p style={{
+              fontFamily: "'Montserrat', sans-serif",
+              fontWeight: 300,
+              fontSize: '12px',
+              color: 'rgba(255,255,255,0.3)',
+              margin: 0,
+              lineHeight: '1.65',
+            }}>
+              © 2024 Shrisha Architectural Consultancy | All Rights Reserved.
+            </p>
+            <p style={{
+              fontFamily: "'Montserrat', sans-serif",
+              fontWeight: 300,
+              fontSize: '12px',
+              color: 'rgba(255,255,255,0.2)',
+              margin: 0,
+              lineHeight: '1.65',
+            }}>
+              Designed &amp; Developed by Team Segments..
+            </p>
+          </div>
+        </div>
+      </div>
+
     </footer>
   );
 }
