@@ -8,74 +8,41 @@ import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-/* ─── hero slides ─────────────────────────────────────── */
+
+
+
 // const heroSlides = [
-//   {
-//     image: '/images/architecture/ARCHLIASONING/EARTHSONG.jpeg',
-//     line1: 'ARCHITECTURE',
-//     line2: 'LIASONING',
-//   },
-//   {
-//     image: '/images/architecture/ARCHLIASONING/MANGALAMMIDASCITY.jpg',
-//     line1: 'ARCHITECTURE',
-//     line2: 'LIASONING',
-//   },
-//   {
-//     image: '/images/architecture/ARCHCOMM/CHIKHALISR.jpg',
-//     line1: 'ARCHITECTURE',
-//     line2: 'COMMERCIAL',
-//   },
-//   {
-//     image: '/images/architecture/ARCHCOMM/CHIKHALISR606View02.jpg',
-//     line1: 'ARCHITECTURE',
-//     line2: 'COMMERCIAL',
-//   },
-//   {
-//     image: '/images/architecture/ARCHCOMM/NIRA.jpeg',
-//     line1: 'ARCHITECTURE',
-//     line2: 'COMMERCIAL',
-//   },
-//   {
-//     image: '/images/architecture/ARCHVILAA/MOHANRAUT.jpeg',
-//     line1: 'ARCHITECTURE',
-//     line2: 'VILLA',
-//   },
-//   {
-//     image: '/images/architecture/ARCHVILAA/UMESHKATE.jpeg',
-//     line1: 'ARCHITECTURE',
-//     line2: 'VILLA',
-//     position: 'top center',
-//   },
-//   {
-//     image: '/images/architecture/ARCHRESI/SWASTIKHOMETOWN.jpeg',
-//     line1: 'ARCHITECTURE',
-//     line2: 'RESIDENTIAL',
-//   },
-//   {
-//     image: '/images/architecture/ARCHRESI/Cam002SideView001.jpg',
-//     line1: 'ARCHITECTURE',
-//     line2: 'RESIDENTIAL',
-//   },
-//   {
-//     image: '/images/architecture/ARCHRESI/BHOOMIALLIUM.jpeg',
-//     line1: 'ARCHITECTURE',
-//     line2: 'RESIDENTIAL',
-//   },
-  
+//   { image: '/images/architecture/ARCHLIASONING/EARTHSONG.jpeg', line1: 'ARCHITECTURE', line2: 'LIASONING', bgPosition: 'center center' },
+//  { image: '/images/architecture/ARCHLIASONING/MANGALAMMIDASCITY.jpg', line1: 'ARCHITECTURE', line2: 'LIASONING', bgPosition: 'center top' },
+//   { image: '/images/architecture/ARCHCOMM/CHIKHALISR.jpg', line1: 'ARCHITECTURE', line2: 'COMMERCIAL', bgPosition: 'center center' },
+//   { image: '/images/architecture/ARCHCOMM/CHIKHALISR606View02.jpg', line1: 'ARCHITECTURE', line2: 'COMMERCIAL', bgPosition: 'center 30%' },
+//   { image: '/images/architecture/ARCHCOMM/NIRA.jpeg', line1: 'ARCHITECTURE', line2: 'COMMERCIAL', bgPosition: 'center center' },
+//  { image: '/images/architecture/ARCHVILAA/MOHANRAUT.jpeg', line1: 'ARCHITECTURE', line2: 'VILLA', bgPosition: 'center top' },
+//   { image: '/images/architecture/ARCHVILAA/01.jpg', line1: 'ARCHITECTURE', line2: 'VILLA', bgPosition: 'center 0%' },
+//   { image: '/images/architecture/ARCHRESI/SWASTIKHOMETOWN.jpeg', line1: 'ARCHITECTURE', line2: 'RESIDENTIAL', bgPosition: 'center center' },
+//   { image: '/images/architecture/ARCHRESI/Cam002SideView001.jpg', line1: 'ARCHITECTURE', line2: 'RESIDENTIAL', bgPosition: 'center center' },
+// { image: '/images/architecture/ARCHRESI/BHOOMIALLIUM.jpeg', line1: 'ARCHITECTURE', line2: 'RESIDENTIAL', bgPosition: 'center top' },
 // ];
 
 
 const heroSlides = [
+  // 1. LIASONING
   { image: '/images/architecture/ARCHLIASONING/EARTHSONG.jpeg', line1: 'ARCHITECTURE', line2: 'LIASONING', bgPosition: 'center center' },
- { image: '/images/architecture/ARCHLIASONING/MANGALAMMIDASCITY.jpg', line1: 'ARCHITECTURE', line2: 'LIASONING', bgPosition: 'center top' },
+  { image: '/images/architecture/ARCHLIASONING/MANGALAMMIDASCITY.jpg', line1: 'ARCHITECTURE', line2: 'LIASONING', bgPosition: 'center top' },
+
+  // 2. RESIDENTIAL
+  { image: '/images/architecture/ARCHRESI/SWASTIKHOMETOWN.jpeg', line1: 'ARCHITECTURE', line2: 'RESIDENTIAL', bgPosition: 'center center' },
+  { image: '/images/architecture/ARCHRESI/Cam002SideView001.jpg', line1: 'ARCHITECTURE', line2: 'RESIDENTIAL', bgPosition: 'center center' },
+  { image: '/images/architecture/ARCHRESI/BHOOMIALLIUM.jpeg', line1: 'ARCHITECTURE', line2: 'RESIDENTIAL', bgPosition: 'center top' },
+
+  // 3. COMMERCIAL
   { image: '/images/architecture/ARCHCOMM/CHIKHALISR.jpg', line1: 'ARCHITECTURE', line2: 'COMMERCIAL', bgPosition: 'center center' },
   { image: '/images/architecture/ARCHCOMM/CHIKHALISR606View02.jpg', line1: 'ARCHITECTURE', line2: 'COMMERCIAL', bgPosition: 'center 30%' },
   { image: '/images/architecture/ARCHCOMM/NIRA.jpeg', line1: 'ARCHITECTURE', line2: 'COMMERCIAL', bgPosition: 'center center' },
- { image: '/images/architecture/ARCHVILAA/MOHANRAUT.jpeg', line1: 'ARCHITECTURE', line2: 'VILLA', bgPosition: 'center top' },
-  { image: '/images/architecture/ARCHVILAA/UMESHKATE.jpeg', line1: 'ARCHITECTURE', line2: 'VILLA', bgPosition: 'center 20%' },
-  { image: '/images/architecture/ARCHRESI/SWASTIKHOMETOWN.jpeg', line1: 'ARCHITECTURE', line2: 'RESIDENTIAL', bgPosition: 'center center' },
-  { image: '/images/architecture/ARCHRESI/Cam002SideView001.jpg', line1: 'ARCHITECTURE', line2: 'RESIDENTIAL', bgPosition: 'center center' },
-{ image: '/images/architecture/ARCHRESI/BHOOMIALLIUM.jpeg', line1: 'ARCHITECTURE', line2: 'RESIDENTIAL', bgPosition: 'center top' },
+
+  // 4. VILLA
+  { image: '/images/architecture/ARCHVILAA/MOHANRAUT.jpeg', line1: 'ARCHITECTURE', line2: 'VILLA', bgPosition: 'center top' },
+  { image: '/images/architecture/ARCHVILAA/01.jpg', line1: 'ARCHITECTURE', line2: 'VILLA', bgPosition: 'center 0%' },
 ];
 
 /* ─── DISCOVER button (matches FSND circle+line style) ── */

@@ -93,7 +93,7 @@ export default function About() {
             maxWidth: '100%',
           }}
         >
-          {/* TENETS heading — gold, Oswald, same size as FSND h1 */}
+         {/* Heading — gold, Oswald, same size as FSND h1 */}
           <h1
             className="rv"
             style={{
@@ -108,14 +108,13 @@ export default function About() {
               lineHeight: 1,
             }}
           >
-            TENETS
+            CREATING ARCHITECTURE WITH PURPOSE AND PRECISION
           </h1>
 
-          {/* Paragraph 1 — first word gold, rest FSND body style */}
           <p
             className="rv d1"
             style={{
-             fontFamily: "'Montserrat', sans-serif",
+              fontFamily: "'Montserrat', sans-serif",
               fontWeight: 300,
               fontSize: '16px',
               lineHeight: '30px',
@@ -123,9 +122,11 @@ export default function About() {
               marginBottom: '10px',
             }}
           >
-            <span style={{ color: '#f9b617' }}>Shrisha Consultancy</span> is a multidisciplinary
-            design firm specializing in Architectural Design, Architectural Liaisoning, and Interior
-            Design, established in Pune.
+            At <span style={{ color: '#f9b617' }}>Shrisha Architects</span>, we believe great
+            architecture is achieved when visionary design meets strategic execution. Our practice
+            combines contemporary architectural solutions with specialized liaisoning services,
+            enabling projects to move efficiently through planning, approvals, and construction
+            stages.
           </p>
 
           <p
@@ -136,46 +137,13 @@ export default function About() {
               fontSize: '16px',
               lineHeight: '30px',
               color: '#fff',
-               marginBottom: '10px',
-            }}
-          >
-            The founder with a team of young and ambitious creative designers relentlessly works
-            with a unified goal in mind: "end product to client satisfaction". Each project
-            represents a blend of design elements with technology, exploring the ever-changing world
-            of ideas.
-          </p>
-
-          <p
-            className="rv d3"
-            style={{
-              fontFamily: "'Montserrat', sans-serif",
-              fontWeight: 300,
-              fontSize: '16px',
-              lineHeight: '30px',
-              color: '#fff',
               marginBottom: 0,
             }}
           >
-            The firm has been engaged in conceptualising and designing various size and scale of
-            projects ranging from residential layouts to standalone structures, from private villas
-            to commercial buildings — all conceived from architectural and interior perspectives,
-            each with a fresh vision, exploring the ever-changing world of ideas.
-          </p>
-
-          <p
-            className="rv d4"
-            style={{
-              fontFamily: "'Montserrat', sans-serif",
-              fontWeight: 300,
-              fontSize: '16px',
-              lineHeight: '30px',
-              color: '#fff',
-              marginBottom: 0,
-            }}
-          >
-            Driven by a profound belief in the capacity of good design to shape how people behave,
-            the studio&apos;s work is underpinned by a clear understanding of the critical role
-            that built environments play in daily life.
+            With a commitment to innovation, transparency, and technical excellence, we create
+            environments that are aesthetically compelling, functionally efficient, and fully
+            aligned with statutory requirements. We are dedicated to making the development process
+            as seamless as the spaces we design.
           </p>
         </div>
       </section>
@@ -239,7 +207,7 @@ export default function About() {
                 marginTop: 0,
               }}
             >
-              AR. VILAS YELE
+              Ar. VILAS YELE
             </h3>
 
             <p
@@ -253,7 +221,7 @@ export default function About() {
                 marginBottom: '24px',
               }}
             >
-              Founder &amp; Principal Architect
+            Shrisha Consultancy Founder
             </p>
 
             {/* <p

@@ -12,17 +12,54 @@ const liasoningImages = [
   '/images/architecture/ARCHLIASONING/MANGALAMMIDASCITY.jpg',
 ];
 
+const liasoningDetails = [
+  {
+    title: 'EARTHSONG AT RAVET',
+    plotArea: '20500 SQM.',
+    builtUpArea: '1562340 SQFT',
+    tenaments: '710 FLATS & COMMERCIAL SHOPS',
+  },
+  {
+    title: 'MIDAS CITY AT CHOVISAWADI',
+    plotArea: '25200 SQM.',
+    builtUpArea: '1240000 SQFT',
+    tenaments: '991 FLATS & COMMERCIAL SHOPS',
+  },
+];
+
 function Lightbox({ images, startIndex, onClose }: { images: string[]; startIndex: number; onClose: () => void }) {
   const [idx, setIdx] = useState(startIndex);
   const prev = () => setIdx((i) => (i - 1 + images.length) % images.length);
   const next = () => setIdx((i) => (i + 1) % images.length);
+  const details = liasoningDetails[idx];
 
   return (
     <div style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.92)', zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={onClose}>
-      <div style={{ position: 'relative', maxWidth: '90vw', maxHeight: '90vh' }} onClick={(e) => e.stopPropagation()}>
-        <Image src={images[idx]} alt={`Image ${idx + 1}`} width={1200} height={800} style={{ maxWidth: '90vw', maxHeight: '85vh', objectFit: 'contain' }} />
-        <div style={{ position: 'absolute', bottom: '-32px', left: '50%', transform: 'translateX(-50%)', color: 'rgba(255,255,255,0.5)', fontSize: '12px', letterSpacing: '0.2em', fontFamily: "'Montserrat', sans-serif" }}>
-          {idx + 1} / {images.length}
+      <div
+        style={{ position: 'relative', maxWidth: '90vw', maxHeight: '90vh', display: 'flex', alignItems: 'center', gap: '40px' }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Details — left side */}
+        <div style={{ maxWidth: '320px', textAlign: 'left' }}>
+          <h3 style={{
+            fontFamily: "'Oswald', sans-serif", fontWeight: 400, fontSize: '22px',
+            letterSpacing: '0.15em', textTransform: 'uppercase', color: '#fff', marginBottom: '20px',
+          }}>
+            {details.title}
+          </h3>
+          <div style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 300, fontSize: '14px', color: 'rgba(255,255,255,0.75)', lineHeight: '1.8' }}>
+            <p style={{ marginBottom: '6px' }}><span style={{ color: '#f9b617' }}>Plot Area:</span> {details.plotArea}</p>
+            <p style={{ marginBottom: '6px' }}><span style={{ color: '#f9b617' }}>Built-up Area:</span> {details.builtUpArea}</p>
+            <p style={{ marginBottom: 0 }}><span style={{ color: '#f9b617' }}>Tenaments:</span> {details.tenaments}</p>
+          </div>
+        </div>
+
+        {/* Image — right side */}
+        <div style={{ position: 'relative' }}>
+          <Image src={images[idx]} alt={`Image ${idx + 1}`} width={1200} height={800} style={{ maxWidth: '60vw', maxHeight: '80vh', objectFit: 'contain' }} />
+          <div style={{ position: 'absolute', bottom: '-32px', left: '50%', transform: 'translateX(-50%)', color: 'rgba(255,255,255,0.5)', fontSize: '12px', letterSpacing: '0.2em', fontFamily: "'Montserrat', sans-serif" }}>
+            {idx + 1} / {images.length}
+          </div>
         </div>
       </div>
       <button onClick={onClose} style={{ position: 'fixed', top: '20px', right: '20px', background: 'none', border: 'none', cursor: 'pointer', color: '#fff' }}><X size={28} /></button>
@@ -92,7 +129,7 @@ export default function LiasoningPage() {
                 fontSize: 'clamp(16px, 2vw, 22px)', letterSpacing: '0.15em',
                 textTransform: 'uppercase', color: '#fff',
               }}>
-                {i === 0 ? 'EARTHSONG' : 'MANGALAM MIDAS CITY'}
+                {i === 0 ? 'EARTHSONG AT RAVET' : 'MIDAS CITY AT CHOVISAWADI'}
               </div>
             </div>
           ))}

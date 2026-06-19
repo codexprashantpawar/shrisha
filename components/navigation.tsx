@@ -44,11 +44,11 @@ export default function Navigation() {
   });
 
   return (
-    <nav
+   <nav
       className="fixed top-0 w-full z-50"
-      style={{ backgroundColor: '#272727', borderBottom: '1px solid rgba(255,255,255,0.06)' }}
+      style={{ backgroundColor: 'rgba(50, 50, 50, 0.95)', borderBottom: '1px solid rgba(255,255,255,0.06)' }}
     >
-     <div className="w-full px-6 lg:px-10 flex items-center h-[60px]" style={{ gap: '0' }}>
+     <div className="w-full px-6 lg:px-10 flex items-center h-[70px]" style={{ gap: '0' }}>
 
         {/* Left: Logo */}
         <Link href="/" className="flex-shrink-0" style={{ display: 'flex', alignItems: 'center' }}>

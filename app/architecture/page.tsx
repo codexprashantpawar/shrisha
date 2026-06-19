@@ -8,22 +8,22 @@ import Link from 'next/link';
 const categories = [
   {
     slug: 'bajirao-park',
-    label: 'BAJIRAO PARK',
+    label: 'BAJIRAO PARK AT RAVET',
     image: '/images/architecture/BAJIRAOPARK/Bajirao1.jpeg',
   },
   {
     slug: 'florenza-pimpri',
-    label: 'FLORENZA PIMPRI',
+    label: 'FLORENZA AT PIMPRI',
     image: '/images/architecture/FLORENZAPIMPRI/01.jpg',
   },
   {
     slug: 'essentia',
-    label: 'ESSENTIA',
+    label: 'ESSENTIA AT RAVET',
     image: '/images/architecture/ESSENTIA/Essentia1.jpeg',
   },
   {
     slug: 'b-square',
-    label: 'B SQUARE',
+    label: 'B SQUARE AT THERGAON',
     image: '/images/architecture/BSQUARE/BSquare1.jpg',
   },
 ];

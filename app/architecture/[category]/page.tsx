@@ -12,9 +12,12 @@ const categoryData: Record<string, {
   label: string;
   heroBg: string;
   images: string[];
+  plotArea: string;
+  builtUpArea: string;
+  tenaments: string;
 }> = {
   'bajirao-park': {
-    label: 'BAJIRAO PARK',
+    label: 'BAJIRAO PARK AT RAVET',
     heroBg: '/images/architecture/BAJIRAOPARK/Bajirao1.jpeg',
     images: [
       '/images/architecture/BAJIRAOPARK/Bajirao1.jpeg',
@@ -22,9 +25,12 @@ const categoryData: Record<string, {
       '/images/architecture/BAJIRAOPARK/Bajirao3.jpeg',
       '/images/architecture/BAJIRAOPARK/Bajirao4.jpeg',
     ],
+    plotArea: '2489.34 SQM.',
+    builtUpArea: '58258 SQFT',
+    tenaments: '71 FLATS, 2 BUNGALOWS & COMMERCIAL SHOPS',
   },
   'florenza-pimpri': {
-    label: 'FLORENZA PIMPRI',
+    label: 'FLORENZA AT PIMPRI',
     heroBg: '/images/architecture/FLORENZAPIMPRI/01.jpg',
     images: [
       '/images/architecture/FLORENZAPIMPRI/01.jpg',
@@ -34,18 +40,24 @@ const categoryData: Record<string, {
       '/images/architecture/FLORENZAPIMPRI/05.jpg',
       '/images/architecture/FLORENZAPIMPRI/06.jpg',
     ],
+    plotArea: '3086.93 SQM.',
+    builtUpArea: '170000 SQFT',
+    tenaments: '142 FLATS',
   },
   'essentia': {
-    label: 'ESSENTIA',
+    label: 'ESSENTIA AT RAVET',
     heroBg: '/images/architecture/ESSENTIA/Essentia1.jpeg',
     images: [
       '/images/architecture/ESSENTIA/Essentia1.jpeg',
       '/images/architecture/ESSENTIA/Essentia2.jpeg',
       '/images/architecture/ESSENTIA/Essentia3.jpeg',
     ],
+    plotArea: '2650 SQM.',
+    builtUpArea: '68300 SQFT',
+    tenaments: '76 FLATS & COMMERCIAL SHOPS',
   },
   'b-square': {
-    label: 'B SQUARE',
+    label: 'B SQUARE AT THERGAON',
     heroBg: '/images/architecture/BSQUARE/BSquare1.jpg',
     images: [
       '/images/architecture/BSQUARE/BSquare1.jpg',
@@ -54,14 +66,18 @@ const categoryData: Record<string, {
       '/images/architecture/BSQUARE/BSquare4.jpg',
       '/images/architecture/BSQUARE/BSquare5.jpg',
     ],
+    plotArea: '2300 SQM.',
+    builtUpArea: '68600 SQFT',
+    tenaments: '42 FLATS & COMMERCIAL SHOPS',
   },
 };
 
 // ── Lightbox ───────────────────────────────────────────
 function Lightbox({
-  images, startIndex, onClose,
+  images, startIndex, onClose, label, plotArea, builtUpArea, tenaments,
 }: {
   images: string[]; startIndex: number; onClose: () => void;
+  label: string; plotArea: string; builtUpArea: string; tenaments: string;
 }) {
   const [idx, setIdx] = useState(startIndex);
   const prev = () => setIdx((i) => (i - 1 + images.length) % images.length);
@@ -75,22 +91,45 @@ function Lightbox({
       }}
       onClick={onClose}
     >
-      <div style={{ position: 'relative', maxWidth: '90vw', maxHeight: '90vh' }}
-        onClick={(e) => e.stopPropagation()}>
-        <Image
-          src={images[idx]}
-          alt={`Image ${idx + 1}`}
-          width={1200}
-          height={800}
-          style={{ maxWidth: '90vw', maxHeight: '85vh', objectFit: 'contain' }}
-        />
-        {/* Counter */}
-        <div style={{
-          position: 'absolute', bottom: '-32px', left: '50%', transform: 'translateX(-50%)',
-          color: 'rgba(255,255,255,0.5)', fontSize: '12px', letterSpacing: '0.2em',
-          fontFamily: "'Montserrat', sans-serif",
-        }}>
-          {idx + 1} / {images.length}
+      <div
+        style={{
+          position: 'relative', maxWidth: '90vw', maxHeight: '90vh',
+          display: 'flex', alignItems: 'center', gap: '40px',
+        }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Details — left side */}
+        <div style={{ maxWidth: '320px', textAlign: 'left' }}>
+          <h3 style={{
+            fontFamily: "'Oswald', sans-serif", fontWeight: 400, fontSize: '22px',
+            letterSpacing: '0.15em', textTransform: 'uppercase', color: '#fff', marginBottom: '20px',
+          }}>
+            {label}
+          </h3>
+          <div style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 300, fontSize: '14px', color: 'rgba(255,255,255,0.75)', lineHeight: '1.8' }}>
+            <p style={{ marginBottom: '6px' }}><span style={{ color: '#f9b617' }}>Plot Area:</span> {plotArea}</p>
+            <p style={{ marginBottom: '6px' }}><span style={{ color: '#f9b617' }}>Built-up Area:</span> {builtUpArea}</p>
+            <p style={{ marginBottom: 0 }}><span style={{ color: '#f9b617' }}>Tenaments:</span> {tenaments}</p>
+          </div>
+        </div>
+
+        {/* Image — right side */}
+        <div style={{ position: 'relative' }}>
+          <Image
+            src={images[idx]}
+            alt={`Image ${idx + 1}`}
+            width={1200}
+            height={800}
+            style={{ maxWidth: '60vw', maxHeight: '80vh', objectFit: 'contain' }}
+          />
+          {/* Counter */}
+          <div style={{
+            position: 'absolute', bottom: '-32px', left: '50%', transform: 'translateX(-50%)',
+            color: 'rgba(255,255,255,0.5)', fontSize: '12px', letterSpacing: '0.2em',
+            fontFamily: "'Montserrat', sans-serif",
+          }}>
+            {idx + 1} / {images.length}
+          </div>
         </div>
       </div>
 
@@ -116,7 +155,6 @@ function Lightbox({
     </div>
   );
 }
-
 // ── Main page ──────────────────────────────────────────
 export default function ArchSubPage({ params }: { params: Promise<{ category: string }> }) {
  const { category } = use(params);
@@ -253,11 +291,15 @@ export default function ArchSubPage({ params }: { params: Promise<{ category: st
 
       <Footer />
 
-    {lightbox && (
+  {lightbox && (
         <Lightbox
           images={cat.images}
           startIndex={lightbox.idx}
           onClose={() => setLightbox(null)}
+          label={cat.label}
+          plotArea={cat.plotArea}
+          builtUpArea={cat.builtUpArea}
+          tenaments={cat.tenaments}
         />
       )}
      

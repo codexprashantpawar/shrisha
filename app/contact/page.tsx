@@ -58,8 +58,8 @@ export default function Contact() {
 
           {/* Map */}
           <div className="relative w-full h-[400px] md:h-auto">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15126.143646058626!2d73.78222705541994!3d18.594950200000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b8e0b174ca15%3A0x37fd8f8bb33a6cf0!2sRose%20Icon%20Co-Operative%20Housing%20Society!5e0!3m2!1sen!2sin!4v1779705187613!5m2!1sen!2sin"
+           <iframe
+              src="https://www.google.com/maps?q=Rose+Icon+Amenity+Building,+Kunal+Icon+Road,+Pimple+Saudagar,+Pune,+Maharashtra+411027&output=embed"
               width="100%" height="100%"
               style={{ border: 0, filter: 'grayscale(100%) invert(90%) contrast(90%)' }}
               allowFullScreen loading="lazy"
@@ -106,7 +106,7 @@ export default function Contact() {
                 <div>
                   <p className="text-[10px] tracking-[0.35em] uppercase text-primary mb-2">Address</p>
                   <p className="text-white/70 text-[14px] leading-relaxed">
-                   Address:p- Shop No.113, Rose Icon Society Rd, commercial, Pimple Saudagar, Pune, Pimpri-Chinchwad, Maharashtra 411027
+                    Shop No-112 &amp; 113, Rose Icon Amenity Building, Kunal Icon Road, Pimple Saudagar, Pune, Pimpri-Chinchwad, Maharashtra, 411027
                   </p>
                 </div>
               </div>
@@ -114,7 +114,7 @@ export default function Contact() {
               {/* Get Direction */}
               <div className="reveal d3">
                 <a
-                  href="https://maps.google.com"
+                 href="https://www.google.com/maps/dir/?api=1&destination=Rose+Icon+Amenity+Building,+Kunal+Icon+Road,+Pimple+Saudagar,+Pune,+Maharashtra+411027"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 px-7 py-3 bg-primary text-black text-[11px] font-bold tracking-[0.25em] uppercase hover:bg-primary/85 transition-colors duration-300"
