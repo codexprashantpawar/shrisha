@@ -13,10 +13,11 @@ const expertiseLinks = [
 
 export default function Navigation() {
   const pathname = usePathname();
-  const [isOpen, setIsOpen] = useState(false);
-  const [expertiseOpen, setExpertiseOpen] = useState(false);
-  const [mobileExpertiseOpen, setMobileExpertiseOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+const [isOpen, setIsOpen] = useState(false);
+const [expertiseOpen, setExpertiseOpen] = useState(false);
+const [mobileExpertiseOpen, setMobileExpertiseOpen] = useState(false);
+const [scrolled, setScrolled] = useState(false);
+const dropdownRef = useRef<HTMLDivElement>(null);
 
   const isExpertiseActive = pathname === '/architecture' || pathname === '/liasoning';
 
@@ -29,6 +30,16 @@ export default function Navigation() {
     }
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Transparent on top, dark on scroll
+  useEffect(() => {
+    function handleScroll() {
+      setScrolled(window.scrollY > 20);
+    }
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const linkStyle = (href: string) => ({
@@ -44,9 +55,12 @@ export default function Navigation() {
   });
 
   return (
-   <nav
-      className="fixed top-0 w-full z-50"
-      style={{ backgroundColor: 'rgba(50, 50, 50, 0.95)', borderBottom: '1px solid rgba(255,255,255,0.06)' }}
+  <nav
+      className="fixed top-0 w-full z-50 transition-colors duration-300"
+      style={{
+        backgroundColor: scrolled ? 'rgba(20, 20, 20, 0.95)' : 'transparent',
+        borderBottom: scrolled ? '1px solid rgba(255,255,255,0.06)' : '1px solid transparent',
+      }}
     >
      <div className="w-full px-6 lg:px-10 flex items-center h-[70px]" style={{ gap: '0' }}>
 
