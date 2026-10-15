@@ -192,21 +192,36 @@ export default function Footer() {
       <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
         <div className="container-custom" style={{ padding: '18px 0' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
+            <p
+  style={{
+    fontFamily: "'Montserrat', sans-serif",
+    fontWeight: 300,
+    fontSize: '12px',
+    color: '#ffffff',
+    margin: 0,
+    lineHeight: '1.65',
+  }}
+>
+  <a
+    href="https://www.sunrayztechnology.com/index.html"
+    title="Visit SunRayz Technology"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      color: 'inherit',
+      textDecoration: 'none',
+      cursor: 'pointer',
+    }}
+  >
+    ©2026 SunRayz Technology 
+  </a>
+   | All Rights Reserved.
+</p>
             <p style={{
               fontFamily: "'Montserrat', sans-serif",
               fontWeight: 300,
               fontSize: '12px',
-              color: 'rgba(255,255,255,0.3)',
-              margin: 0,
-              lineHeight: '1.65',
-            }}>
-              © 2024 Shrisha Architectural Consultancy | All Rights Reserved.
-            </p>
-            <p style={{
-              fontFamily: "'Montserrat', sans-serif",
-              fontWeight: 300,
-              fontSize: '12px',
-              color: 'rgba(255,255,255,0.2)',
+              color: '#ffffff',
               margin: 0,
               lineHeight: '1.65',
             }}>

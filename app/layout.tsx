@@ -10,7 +10,7 @@ const montserrat = Montserrat({ subsets: ["latin"], weight: ['300','400','500','
 export const metadata: Metadata = {
   title: 'Shrisha - Architectural Visionaries',
   description: 'Premium architectural consultancy specializing in residential, commercial, and institutional design in Pune',
-  generator: 'v0.app',
+  generator: 'Designed by Prashant Pawar',
   icons: {
     icon: [
       {

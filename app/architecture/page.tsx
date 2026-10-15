@@ -6,26 +6,52 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const categories = [
+  // {
+  //   slug: 'bajirao-park',
+  //   label: 'BAJIRAO PARK AT RAVET',
+  //   image: '/images/architecture/BAJIRAOPARK/Bajirao1.jpeg',
+  // },
+  // {
+  //   slug: 'florenza-pimpri',
+  //   label: 'FLORENZA AT PIMPRI',
+  //   image: '/images/architecture/FLORENZAPIMPRI/01.jpg',
+  // },
+  // {
+  //   slug: 'essentia',
+  //   label: 'ESSENTIA AT RAVET',
+  //   image: '/images/architecture/ESSENTIA/Essentia1.jpeg',
+  // },
+  // {
+  //   slug: 'b-square',
+  //   label: 'B SQUARE AT THERGAON',
+  //   image: '/images/architecture/BSQUARE/BSquare1.jpg',
+  // },
   {
-    slug: 'bajirao-park',
-    label: 'BAJIRAO PARK AT RAVET',
-    image: '/images/architecture/BAJIRAOPARK/Bajirao1.jpeg',
+    slug: 'fortune-flora',
+    label: 'FORTUNE FLORA AT KIWALE',
+    image: '/images/architecture/FORTUNEFLORA/01.jpg',
   },
   {
-    slug: 'florenza-pimpri',
-    label: 'FLORENZA AT PIMPRI',
-    image: '/images/architecture/FLORENZAPIMPRI/01.jpg',
+    slug: 'riveria',
+    label: 'RIVIERAA AT DUDULGAON',
+    image: '/images/architecture/RIVIERAA/01.jpg',
   },
   {
-    slug: 'essentia',
-    label: 'ESSENTIA AT RAVET',
-    image: '/images/architecture/ESSENTIA/Essentia1.jpeg',
+    slug: 'silver-18',
+    label: 'SILVER 18 AT CHIKHALI',
+    image: '/images/architecture/SILVER18/01.jpg',
+  },
+
+    {
+    slug: 'SWASTIKHOMETOWN',
+    label: 'SWASTIK HOMETOWN AT CHIKHALI',
+    image: '/images/architecture/SWASTIKHOMETOWN/1.jpeg',
   },
   {
-    slug: 'b-square',
-    label: 'B SQUARE AT THERGAON',
-    image: '/images/architecture/BSQUARE/BSquare1.jpg',
-  },
+    slug: 'SWAYMBHU',
+    label: 'SWAYAMBHU AT PIMPLE NILAKH',
+    image: '/images/architecture/SWAYMBHU/01.jpeg',
+  }
 ];
 
 export default function ArchitecturePage() {

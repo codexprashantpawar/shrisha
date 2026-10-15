@@ -1,5 +1,4 @@
 'use client';
-
 import Navigation from '@/components/navigation';
 import Footer from '@/components/footer';
 import Image from 'next/image';
@@ -16,59 +15,125 @@ const categoryData: Record<string, {
   builtUpArea: string;
   tenaments: string;
 }> = {
-  'bajirao-park': {
-    label: 'BAJIRAO PARK AT RAVET',
-    heroBg: '/images/architecture/BAJIRAOPARK/Bajirao1.jpeg',
+  // 'bajirao-park': {
+  //   label: 'BAJIRAO PARK AT RAVET',
+  //   heroBg: '/images/architecture/BAJIRAOPARK/Bajirao1.jpeg',
+  //   images: [
+  //     '/images/architecture/BAJIRAOPARK/Bajirao1.jpeg',
+  //     '/images/architecture/BAJIRAOPARK/Bajirao2.jpeg',
+  //     '/images/architecture/BAJIRAOPARK/Bajirao3.jpeg',
+  //     '/images/architecture/BAJIRAOPARK/Bajirao4.jpeg',
+  //   ],
+  //   plotArea: '2489.34 SQM.',
+  //   builtUpArea: '58258 SQFT',
+  //   tenaments: '71 FLATS, 2 BUNGALOWS & COMMERCIAL SHOPS',
+  // },
+  // 'florenza-pimpri': {
+  //   label: 'FLORENZA AT PIMPRI',
+  //   heroBg: '/images/architecture/FLORENZAPIMPRI/01.jpg',
+  //   images: [
+  //     '/images/architecture/FLORENZAPIMPRI/01.jpg',
+  //     '/images/architecture/FLORENZAPIMPRI/02.jpg',
+  //     '/images/architecture/FLORENZAPIMPRI/03.jpg',
+  //     '/images/architecture/FLORENZAPIMPRI/04.jpg',
+  //     '/images/architecture/FLORENZAPIMPRI/05.jpg',
+  //     '/images/architecture/FLORENZAPIMPRI/06.jpg',
+  //     '/images/architecture/FLORENZAPIMPRI/07.jpg',
+  //   ],
+  //   plotArea: '3086.93 SQM.',
+  //   builtUpArea: '170000 SQFT',
+  //   tenaments: '142 FLATS',
+  // },
+  // 'essentia': {
+  //   label: 'ESSENTIA AT RAVET',
+  //   heroBg: '/images/architecture/ESSENTIA/Essentia1.jpeg',
+  //   images: [
+  //     '/images/architecture/ESSENTIA/Essentia1.jpeg',
+  //     '/images/architecture/ESSENTIA/Essentia2.jpeg',
+  //     '/images/architecture/ESSENTIA/Essentia3.jpeg',
+  //   ],
+  //   plotArea: '2650 SQM.',
+  //   builtUpArea: '68300 SQFT',
+  //   tenaments: '76 FLATS & COMMERCIAL SHOPS',
+  // },
+  // 'b-square': {
+  //   label: 'B SQUARE AT THERGAON',
+  //   heroBg: '/images/architecture/BSQUARE/BSquare1.jpg',
+  //   images: [
+  //     '/images/architecture/BSQUARE/BSquare1.jpg',
+  //     '/images/architecture/BSQUARE/BSquare2.jpg',
+  //     '/images/architecture/BSQUARE/BSquare3.jpg',
+  //     '/images/architecture/BSQUARE/BSquare4.jpg',
+  //     '/images/architecture/BSQUARE/BSquare5.jpg',
+  //   ],
+  //   plotArea: '2300 SQM.',
+  //   builtUpArea: '68600 SQFT',
+  //   tenaments: '42 FLATS & COMMERCIAL SHOPS',
+  // },
+  'fortune-flora': {
+    label: 'FORTUNE FLORA AT KIWALE',
+    heroBg: '/images/architecture/FORTUNEFLORA/01.jpg',
     images: [
-      '/images/architecture/BAJIRAOPARK/Bajirao1.jpeg',
-      '/images/architecture/BAJIRAOPARK/Bajirao2.jpeg',
-      '/images/architecture/BAJIRAOPARK/Bajirao3.jpeg',
-      '/images/architecture/BAJIRAOPARK/Bajirao4.jpeg',
+      '/images/architecture/FORTUNEFLORA/01.jpg',
+      '/images/architecture/FORTUNEFLORA/02.jpg',
+      '/images/architecture/FORTUNEFLORA/03.jpg',
+      '/images/architecture/FORTUNEFLORA/04.jpg',
     ],
-    plotArea: '2489.34 SQM.',
-    builtUpArea: '58258 SQFT',
-    tenaments: '71 FLATS, 2 BUNGALOWS & COMMERCIAL SHOPS',
+    plotArea: '621.5 SQM.',
+    builtUpArea: '28000 SQFT',
+    tenaments: '28 FLATS',
   },
-  'florenza-pimpri': {
-    label: 'FLORENZA AT PIMPRI',
-    heroBg: '/images/architecture/FLORENZAPIMPRI/01.jpg',
+  'riveria': {
+    label: 'RIVIERAA AT DUDULGAON',
+    heroBg: '/images/architecture/RIVIERAA/01.jpg',
     images: [
-      '/images/architecture/FLORENZAPIMPRI/01.jpg',
-      '/images/architecture/FLORENZAPIMPRI/02.jpg',
-      '/images/architecture/FLORENZAPIMPRI/03.jpg',
-      '/images/architecture/FLORENZAPIMPRI/04.jpg',
-      '/images/architecture/FLORENZAPIMPRI/05.jpg',
-      '/images/architecture/FLORENZAPIMPRI/06.jpg',
+      '/images/architecture/RIVIERAA/01.jpg',
+      '/images/architecture/RIVIERAA/02.jpg',
+      '/images/architecture/RIVIERAA/03.jpg',
+      '/images/architecture/RIVIERAA/04.jpg',
     ],
-    plotArea: '3086.93 SQM.',
-    builtUpArea: '170000 SQFT',
-    tenaments: '142 FLATS',
+    plotArea: '6459 SQM.',
+    builtUpArea: '303000 SQFT',
+    tenaments: '276 FLATS & 9 SHOPS',
   },
-  'essentia': {
-    label: 'ESSENTIA AT RAVET',
-    heroBg: '/images/architecture/ESSENTIA/Essentia1.jpeg',
+  'silver-18': {
+    label: 'SILVER 18 AT CHIKHALI',
+    heroBg: '/images/architecture/SILVER18/01.jpg',
     images: [
-      '/images/architecture/ESSENTIA/Essentia1.jpeg',
-      '/images/architecture/ESSENTIA/Essentia2.jpeg',
-      '/images/architecture/ESSENTIA/Essentia3.jpeg',
+      '/images/architecture/SILVER18/01.jpg',
     ],
-    plotArea: '2650 SQM.',
-    builtUpArea: '68300 SQFT',
-    tenaments: '76 FLATS & COMMERCIAL SHOPS',
+    plotArea: '7872.41 SQM.',
+    builtUpArea: '215000 SQFT',
+    tenaments: '325 FLATS',
   },
-  'b-square': {
-    label: 'B SQUARE AT THERGAON',
-    heroBg: '/images/architecture/BSQUARE/BSquare1.jpg',
+
+
+  'SWASTIKHOMETOWN': {
+    label: 'SWASTIK HOMETOWN AT CHIKHALI',
+    heroBg: '/images/architecture/SWASTIKHOMETOWN/1.jpeg',
     images: [
-      '/images/architecture/BSQUARE/BSquare1.jpg',
-      '/images/architecture/BSQUARE/BSquare2.jpg',
-      '/images/architecture/BSQUARE/BSquare3.jpg',
-      '/images/architecture/BSQUARE/BSquare4.jpg',
-      '/images/architecture/BSQUARE/BSquare5.jpg',
+      '/images/architecture/SWASTIKHOMETOWN/1.jpeg',
+      '/images/architecture/SWASTIKHOMETOWN/2.jpeg',
     ],
-    plotArea: '2300 SQM.',
-    builtUpArea: '68600 SQFT',
-    tenaments: '42 FLATS & COMMERCIAL SHOPS',
+  
+    plotArea: '59,202 SQ.FT.',
+    builtUpArea: '1,75,000 SQ.FT.',
+    tenaments: '206 FLATS',
+  },
+
+
+  'SWAYMBHU': {
+    label: 'SWAYAMBHU AT PIMPLE NILAKH',
+    heroBg: '/images/architecture/SWAYMBHU/01.jpeg',
+    images: [
+      '/images/architecture/SWAYMBHU/01.jpeg',
+    ],
+
+   
+
+    plotArea: '15,100 SQ.FT.',
+    builtUpArea: '30,500 SQ.FT.',
+    tenaments: '48 FLATS',
   },
 };
 
